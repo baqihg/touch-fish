@@ -1,65 +1,27 @@
-# touch-fish README
+#### 一个可以用来下载、阅读小说的 vscode 插件
+  
+## 使用流程  
+1. 从 vscode 扩展商店下载 touch-fish
+2. 使用 `command + shift + p` 进入命令面板
+3. 输入 tf download 输入书名进行搜索
+4. 下载对应小说
+5. 下载完成后会自动弹出已下载列表（如果没有弹出，请在命令面板输出 tf select 进行选择
+6. vscode 下方的状态栏右侧会出现对应小说
+7. 点击小说内容进行翻页
+  
+## 功能列表  
 
-This is the README for your extension "touch-fish". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+|  命令 | 描述 |
+| ---- | --- |
+| tf-download | 小说下载（数据来自笔趣阁） |
+| tf-select | 选择已下载小说 |
+| tf-skip | 跳页（打开格式化之后的小说文件，点击对应的行即可跳页） |
+| tf-remove | 删除小说 |
+  
+## TODO
+- 自动翻页 
+- 上一页
+- 本地上传txt
+- format 优化
+- 更多站点下载
+- 并发下载

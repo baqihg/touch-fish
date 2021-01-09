@@ -1,8 +1,9 @@
 {
-  "name": "touch-fish",
+	"name": "touch-fish",
 	"displayName": "touch-fish",
-	"description": "",
-	"version": "0.0.1",
+	"description": "一个可以用来下载、阅读小说的 vscode 插件",
+	"repository": "https://github.com/baqihg/touch-fish.git",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -10,14 +11,43 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:touch-fish.helloWorld"
+		"*"
 	],
 	"main": "./out/extension.js",
+	"publisher": "touch-fish",
 	"contributes": {
 		"commands": [
 			{
-				"command": "touch-fish.helloWorld",
-				"title": "Hello World"
+				"command": "touch-fish.show",
+				"title": "tf show"
+			},
+			{
+				"command": "touch-fish.download",
+				"title": "tf download"
+			},
+			{
+				"command": "touch-fish.select",
+				"title": "tf select"
+			},
+			{
+				"command": "touch-fish.remove",
+				"title": "tf remove"
+			},
+			{
+				"command": "touch-fish.skip",
+				"title": "tf skip"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "touch-fish.toggle",
+				"key": "ctrl+alt+s",
+				"mac": "cmd+ctrl+s"
+			},
+			{
+				"command": "touch-fish.next",
+				"key": "ctrl+alt+n",
+				"mac": "cmd+ctrl+n"
 			}
 		]
 	},
@@ -30,16 +60,21 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.52.0",
 		"@types/glob": "^7.1.3",
 		"@types/mocha": "^8.0.4",
 		"@types/node": "^12.11.7",
-		"eslint": "^7.15.0",
+		"@types/node-fetch": "^2.5.7",
+		"@types/vscode": "^1.52.0",
 		"@typescript-eslint/eslint-plugin": "^4.9.0",
 		"@typescript-eslint/parser": "^4.9.0",
+		"eslint": "^7.15.0",
 		"glob": "^7.1.6",
 		"mocha": "^8.1.3",
 		"typescript": "^4.1.2",
 		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"node-fetch": "^2.6.1",
+		"node-html-parser": "^2.0.0"
 	}
 }
